@@ -191,13 +191,8 @@ open class MainActivity : AppCompatActivity() {
             val themeColorKey by container.prefs.appThemeColor.collectAsState(initial = initialThemeColorKey)
             val themeColor = AppThemeColor.fromKey(themeColorKey)
             val energyUnit by container.prefs.energyUnit.collectAsState(initial = initialEnergyUnit)
-            val systemDark = isSystemInDarkTheme()
-            val darkTheme = when (appearance) {
-                "light" -> false
-                "dark" -> true
-                else -> systemDark
-            }
-            FudAITheme(darkTheme = darkTheme, themeColor = themeColor) {
+            // CT is intentionally dark-only; the saved appearance preference is retained for data compatibility.
+            FudAITheme(darkTheme = true, themeColor = themeColor) {
                 // Above the NavHost and the shared-meal sheet so both show the chosen unit.
                 CompositionLocalProvider(LocalEnergyUnit provides energyUnit) {
                     Surface(
