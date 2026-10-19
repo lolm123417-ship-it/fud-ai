@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">Fud AI</string>
+    <string name="app_name">CT</string>
 
     <!-- Widgets -->
-    <string name="widget_calorie_label">Fud AI السعرات الحرارية</string>
+    <string name="widget_calorie_label">CT Calories</string>
     <string name="widget_calorie_description">اطّلع على سعراتك الحرارية وعناصرك الكبرى لليوم في لمحة.</string>
-    <string name="widget_protein_label">Fud AI البروتين</string>
+    <string name="widget_protein_label">CT Protein</string>
     <string name="widget_protein_description">اطّلع على تقدم البروتين اليوم في لمحة.</string>
-    <string name="widget_water_label">ماء Fud AI</string>
+    <string name="widget_water_label">CT Water</string>
     <string name="widget_water_description">اطّلع على تقدّم شرب الماء اليوم بلمحة سريعة.</string>
     <string name="widget_water_disabled">فعّل تتبع الماء في Fud AI</string>
     <string name="widget_open_to_refresh">افتح التطبيق للتحديث</string>
