@@ -938,13 +938,9 @@ fun SettingsScreen(
             SectionCard {
                 SettingRow(
                     stringResource(R.string.settings_appearance),
-                    when (ui.appearanceMode) {
-                        "light" -> stringResource(R.string.settings_appearance_light)
-                        "dark" -> stringResource(R.string.settings_appearance_dark)
-                        else -> stringResource(R.string.settings_appearance_system)
-                    },
+                    stringResource(R.string.settings_appearance_dark),
                     icon = Icons.Outlined.Brightness6
-                ) { sheet = SettingsSheet.APPEARANCE }
+                ) { /* CT is dark-only by design. */ }
                 HorizontalDivider()
                 val selectedAppLanguage = currentAppLanguageTag()
                 SettingRow(
