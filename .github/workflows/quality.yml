@@ -132,7 +132,7 @@ jobs:
         working-directory: android
         # No signing or store credentials are available in this job. Assemble the
         # minified Release variant so packaging/R8 regressions fail before tagging.
-        run: ./gradlew :app:testDebugUnitTest :app:lintRelease :app:assembleRelease :app:assembleDebug -PworkoutVectors=none
+        run: ./gradlew :app:testDebugUnitTest :app:lintRelease :app:assembleRelease :app:assembleDebug -PworkoutVectors=none --stacktrace
       - name: Retain unsigned Release APK
         if: success()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
