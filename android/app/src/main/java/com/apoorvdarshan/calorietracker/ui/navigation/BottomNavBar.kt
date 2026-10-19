@@ -128,7 +128,7 @@ fun FudAIBottomNavBar(
 
     val barShape = RoundedCornerShape(BarCorner)
 
-    val backdropColor = if (isDark) Color(0xFF15151A).copy(alpha = 0.86f)
+    val backdropColor = if (isDark) Color(0xCC17171D)
                         else Color(0xFFFCF6F1).copy(alpha = 0.74f)
 
     val barSheen = Brush.verticalGradient(
@@ -145,7 +145,8 @@ fun FudAIBottomNavBar(
     val barBorder = Brush.linearGradient(
         if (isDark) {
             listOf(
-                Color.White.copy(alpha = 0.28f),
+                Color.White.copy(alpha = 0.32f),
+                AppColors.Calorie.copy(alpha = 0.20f),
                 Color.White.copy(alpha = 0.06f)
             )
         } else {
@@ -156,7 +157,7 @@ fun FudAIBottomNavBar(
             )
         }
     )
-    val shadowAlpha = if (isDark) 0.35f else 0.16f
+    val shadowAlpha = if (isDark) 0.42f else 0.16f
 
     Box(
         modifier = modifier
