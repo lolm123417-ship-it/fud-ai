@@ -8,9 +8,9 @@
     <string name="widget_protein_description">See today\'s protein progress at a glance.</string>
     <string name="widget_water_label">CT Water</string>
     <string name="widget_water_description">See today\'s water progress at a glance.</string>
-    <string name="widget_water_disabled">Enable Water Tracking in Fud AI</string>
+    <string name="widget_water_disabled">Enable Water Tracking in CT</string>
     <string name="widget_open_to_refresh">Open app to refresh</string>
-    <string name="widget_refresh_needed_description">Fud AI widget needs a refresh. Open Fud AI.</string>
+    <string name="widget_refresh_needed_description">CT widget needs a refresh. Open CT.</string>
     <string name="widget_today">Today</string>
     <string name="widget_protein">Protein</string>
     <string name="widget_calories">Calories</string>
