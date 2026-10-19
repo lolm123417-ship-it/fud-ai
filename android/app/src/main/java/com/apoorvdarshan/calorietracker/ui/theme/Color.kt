@@ -11,14 +11,14 @@ enum class AppThemeColor(
     val start: Color,
     val end: Color
 ) {
-    FUD_PINK("fudPink", R.string.theme_color_fud_pink, Color(0xFFF55B75), Color(0xFFFF8A9B)),
+    FUD_PINK("fudPink", R.string.theme_color_fud_pink, Color(0xFFFF4FA3), Color(0xFFB45CFF)),
     RED("red", R.string.theme_color_red, Color(0xFFFF3B30), Color(0xFFFF6961)),
     ORANGE("orange", R.string.theme_color_orange, Color(0xFFFF9500), Color(0xFFFFB340)),
     GREEN("green", R.string.theme_color_green, Color(0xFF34C759), Color(0xFF62D46F)),
     MINT("mint", R.string.theme_color_mint, Color(0xFF00C7BE), Color(0xFF66D4CF)),
     TEAL("teal", R.string.theme_color_teal, Color(0xFF30B0C7), Color(0xFF64D2FF)),
     BLUE("blue", R.string.theme_color_blue, Color(0xFF0A84FF), Color(0xFF5EAEFF)),
-    PURPLE("purple", R.string.theme_color_purple, Color(0xFFAF52DE), Color(0xFFBF5AF2)),
+    PURPLE("purple", R.string.theme_color_purple, Color(0xFF8B5CF6), Color(0xFFD946EF)),
     YELLOW("yellow", R.string.theme_color_yellow, Color(0xFFFFCC00), Color(0xFFFFD60A)),
     CORAL("coral", R.string.theme_color_coral, Color(0xFFFF7F50), Color(0xFFFFA382)),
     ROSE_GOLD("roseGold", R.string.theme_color_rose_gold, Color(0xFFC9807C), Color(0xFFE8B4B0)),
@@ -70,10 +70,15 @@ object AppColors {
         get() = Brush.linearGradient(listOf(CalorieStart, CalorieEnd))
 
     val AppBackgroundLight = Color(0xFFF3ECE6)
-    val AppBackgroundDark = Color(0xFF0C0C0E)
+    val AppBackgroundDark = Color(0xFF08070D)
+    val GlassGlowPink = Color(0xFFFF4FA3)
+    val GlassGlowPurple = Color(0xFF8B5CF6)
+    val GlassGlowBlue = Color(0xFF38BDF8)
+    val GlassSurfaceDark = Color(0xB8171420)
+    val GlassHighlight = Color(0x33FFFFFF)
 
     val AppCardLight = Color(0xFFFFFFFF)
-    val AppCardDark = Color(0xE619191F)
+    val AppCardDark = Color(0xC9181520)
 
     val OnLight = Color(0xFF1C1C1E)
     val OnDark = Color(0xFFF2F2F7)
