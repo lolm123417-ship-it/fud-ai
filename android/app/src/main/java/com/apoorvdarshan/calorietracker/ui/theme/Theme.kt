@@ -35,7 +35,8 @@ private fun darkColors(themeColor: AppThemeColor) = darkColorScheme(
     onSurface = AppColors.OnDark,
     surfaceVariant = AppColors.AppCardDark,
     onSurfaceVariant = AppColors.MutedDark,
-    outline = AppColors.DividerDark
+    outline = AppColors.DividerDark,
+    surfaceTint = themeColor.start.copy(alpha = 0.10f)
 )
 
 @Composable
