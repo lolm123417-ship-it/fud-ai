@@ -11,7 +11,7 @@ enum class AppThemeColor(
     val start: Color,
     val end: Color
 ) {
-    FUD_PINK("fudPink", R.string.theme_color_fud_pink, Color(0xFFFF4FA3), Color(0xFFB45CFF)),
+    FUD_PINK("fudPink", R.string.theme_color_fud_pink, Color(0xFFE6E8EB), Color(0xFF9CA3AF)),
     RED("red", R.string.theme_color_red, Color(0xFFFF3B30), Color(0xFFFF6961)),
     ORANGE("orange", R.string.theme_color_orange, Color(0xFFFF9500), Color(0xFFFFB340)),
     GREEN("green", R.string.theme_color_green, Color(0xFF34C759), Color(0xFF62D46F)),
@@ -70,22 +70,22 @@ object AppColors {
         get() = Brush.linearGradient(listOf(CalorieStart, CalorieEnd))
 
     val AppBackgroundLight = Color(0xFFF3ECE6)
-    val AppBackgroundDark = Color(0xFF08070D)
-    val GlassGlowPink = Color(0xFFFF4FA3)
-    val GlassGlowPurple = Color(0xFF8B5CF6)
-    val GlassGlowBlue = Color(0xFF38BDF8)
-    val GlassSurfaceDark = Color(0xB8171420)
+    val AppBackgroundDark = Color(0xFF08090B)
+    val GlassGlowPink = Color(0xFFB8BEC7)
+    val GlassGlowPurple = Color(0xFF858B95)
+    val GlassGlowBlue = Color(0xFFD5D9DF)
+    val GlassSurfaceDark = Color(0xB81B1D21)
     val GlassHighlight = Color(0x33FFFFFF)
 
     val AppCardLight = Color(0xFFFFFFFF)
-    val AppCardDark = Color(0xC9181520)
+    val AppCardDark = Color(0xC91A1C20)
 
     val OnLight = Color(0xFF1C1C1E)
     val OnDark = Color(0xFFF2F2F7)
 
     val MutedLight = Color(0xFF8E8E93)
-    val MutedDark = Color(0xFFAAAAB4)
+    val MutedDark = Color(0xFF9DA3AC)
 
     val DividerLight = Color(0xFFE5E5EA)
-    val DividerDark = Color(0x40FFFFFF)
+    val DividerDark = Color(0x38FFFFFF)
 }
