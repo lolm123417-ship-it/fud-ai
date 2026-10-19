@@ -83,11 +83,16 @@ fun MacroCard(
         )
     }
 
-    Column(
+    FudGlassSurface(
         modifier = modifier.fillMaxWidth(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(8.dp)
+        cornerRadius = 18.dp,
+        padding = 10.dp
     ) {
+        Column(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
         // Value (gradient), above the bar
         Text(
             MacroValueFormatter.string(current),
@@ -153,6 +158,7 @@ fun MacroCard(
                 },
                 maxLines = 1
             )
+        }
         }
     }
 }

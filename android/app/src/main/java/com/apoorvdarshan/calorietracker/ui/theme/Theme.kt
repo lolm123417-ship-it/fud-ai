@@ -1,6 +1,5 @@
 package com.apoorvdarshan.calorietracker.ui.theme
 
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
@@ -35,17 +34,18 @@ private fun darkColors(themeColor: AppThemeColor) = darkColorScheme(
     onSurface = AppColors.OnDark,
     surfaceVariant = AppColors.AppCardDark,
     onSurfaceVariant = AppColors.MutedDark,
-    outline = AppColors.DividerDark
+    outline = AppColors.DividerDark,
+    surfaceTint = themeColor.start.copy(alpha = 0.10f)
 )
 
 @Composable
 fun FudAITheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
+    darkTheme: Boolean = true,
     themeColor: AppThemeColor = AppThemeColor.FUD_PINK,
     content: @Composable () -> Unit
 ) {
     AppColors.setThemeColor(themeColor)
-    val colorScheme = if (darkTheme) darkColors(themeColor) else lightColors(themeColor)
+    val colorScheme = darkColors(themeColor)
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,

@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">Fud AI</string>
+    <string name="app_name">CT</string>
 
     <!-- Widgets -->
-    <string name="widget_calorie_label">Fud AI Kalorien</string>
+    <string name="widget_calorie_label">CT Calories</string>
     <string name="widget_calorie_description">Sieh dir die heutigen Kalorien und Makros auf einen Blick an.</string>
-    <string name="widget_protein_label">Fud AI Protein</string>
+    <string name="widget_protein_label">CT Protein</string>
     <string name="widget_protein_description">Sieh dir den heutigen Protein-Fortschritt auf einen Blick an.</string>
-    <string name="widget_water_label">Fud AI Wasser</string>
+    <string name="widget_water_label">CT Water</string>
     <string name="widget_water_description">Sieh deinen Wasser-Fortschritt von heute auf einen Blick.</string>
     <string name="widget_water_disabled">Aktiviere Wasser-Tracking in Fud AI</string>
     <string name="widget_open_to_refresh">App zum Aktualisieren öffnen</string>

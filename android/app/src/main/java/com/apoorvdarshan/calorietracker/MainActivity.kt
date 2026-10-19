@@ -7,7 +7,6 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -168,7 +167,6 @@ open class MainActivity : AppCompatActivity() {
         }
 
         val startOnboarding = runBlocking { !container.prefs.hasCompletedOnboarding.first() }
-        val initialAppearance = runBlocking { container.prefs.appearanceMode.first() }
         val initialThemeColorKey = runBlocking { container.prefs.appThemeColor.first() }
         val initialEnergyUnit = runBlocking { container.prefs.energyUnit.first() }
 
@@ -187,17 +185,11 @@ open class MainActivity : AppCompatActivity() {
         }
 
         setContent {
-            val appearance by container.prefs.appearanceMode.collectAsState(initial = initialAppearance)
             val themeColorKey by container.prefs.appThemeColor.collectAsState(initial = initialThemeColorKey)
             val themeColor = AppThemeColor.fromKey(themeColorKey)
             val energyUnit by container.prefs.energyUnit.collectAsState(initial = initialEnergyUnit)
-            val systemDark = isSystemInDarkTheme()
-            val darkTheme = when (appearance) {
-                "light" -> false
-                "dark" -> true
-                else -> systemDark
-            }
-            FudAITheme(darkTheme = darkTheme, themeColor = themeColor) {
+            // CT is intentionally dark-only; the saved appearance preference is retained for data compatibility.
+            FudAITheme(darkTheme = true, themeColor = themeColor) {
                 // Above the NavHost and the shared-meal sheet so both show the chosen unit.
                 CompositionLocalProvider(LocalEnergyUnit provides energyUnit) {
                     Surface(

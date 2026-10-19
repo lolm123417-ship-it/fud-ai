@@ -526,7 +526,7 @@ DisposableEffect(lifecycleOwner, vm) {
             }
         },
     ) { padding ->
-        Box(Modifier.fillMaxSize().padding(padding)) {
+        Box(\n            Modifier.fillMaxSize().padding(padding).background(\n                Brush.linearGradient(\n                    listOf(\n                        AppColors.AppBackgroundDark,\n                        Color(0xFF100A18),\n                        Color(0xFF0A0B12),\n                        AppColors.AppBackgroundDark\n                    )\n                )\n            )\n        ) {
         LazyColumn(
             modifier = Modifier
                 .fillMaxSize().testTag("home.diary"),
@@ -571,15 +571,28 @@ DisposableEffect(lifecycleOwner, vm) {
                         )
                     }
                 ) {
-                    Spacer(Modifier.height(32.dp))
-CalorieHero(
-                        current = ui.caloriesToday,
-                        goal = ui.profile?.effectiveCalories ?: 2000,
-                        burnSummary = ui.homeBurnSummary
-                    )
-                    ui.dailySteps?.let { steps ->
-                        Spacer(Modifier.height(8.dp))
-                        DailyStepsRow(steps = steps)
+                    Spacer(Modifier.height(12.dp))
+                    FudGlassSurface(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 16.dp),
+                        cornerRadius = 30.dp,
+                        padding = 16.dp
+                    ) {
+                        Column(
+                            modifier = Modifier.fillMaxWidth(),
+                            horizontalAlignment = Alignment.CenterHorizontally
+                        ) {
+                            CalorieHero(
+                                current = ui.caloriesToday,
+                                goal = ui.profile?.effectiveCalories ?: 2000,
+                                burnSummary = ui.homeBurnSummary
+                            )
+                            ui.dailySteps?.let { steps ->
+                                Spacer(Modifier.height(10.dp))
+                                DailyStepsRow(steps = steps)
+                            }
+                        }
                     }
                     Spacer(Modifier.height(12.dp))
                     Row(

@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">Fud AI</string>
+    <string name="app_name">CT</string>
 
     <!-- Widgets -->
-    <string name="widget_calorie_label">Fud AI Kalorilər</string>
+    <string name="widget_calorie_label">CT Calories</string>
     <string name="widget_calorie_description">Bu günkü kalorilər və makroları bir baxışda görün.</string>
-    <string name="widget_protein_label">Fud AI Protein</string>
+    <string name="widget_protein_label">CT Protein</string>
     <string name="widget_protein_description">Bu günkü protein irəliləyişini bir baxışda görün.</string>
-    <string name="widget_water_label">Fud AI Su</string>
+    <string name="widget_water_label">CT Water</string>
     <string name="widget_water_description">Bugünkü su irəliləyişini bir baxışda görün.</string>
     <string name="widget_water_disabled">Su izləməni Fud AI-da aktivləşdirin</string>
     <string name="widget_open_to_refresh">Yeniləmək üçün tətbiqi açın</string>
