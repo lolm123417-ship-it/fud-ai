@@ -54,29 +54,29 @@ fun FudGlassSurface(
 ) {
     val isDark = MaterialTheme.colorScheme.background.luminance() < 0.5f
     val shape = RoundedCornerShape(cornerRadius)
-    val baseColor = if (isDark) Color(0xFF17171B).copy(alpha = 0.84f)
+    val baseColor = if (isDark) AppColors.GlassSurfaceDark
                     else Color(0xFFFAF2EC).copy(alpha = 0.98f)
-    val shadowColor = if (isDark) Color.Black.copy(alpha = 0.28f)
+    val shadowColor = if (isDark) Color(0xFF020106).copy(alpha = 0.58f)
                       else Color.Black.copy(alpha = 0.11f)
     val sheen = Brush.verticalGradient(
         listOf(
-            Color.White.copy(alpha = if (isDark) 0.070f else 0.34f),
-            Color.White.copy(alpha = if (isDark) 0.018f else 0.08f),
-            AppColors.Calorie.copy(alpha = if (isDark) 0.026f else 0.045f)
+            Color.White.copy(alpha = if (isDark) 0.095f else 0.34f),
+            AppColors.GlassGlowPurple.copy(alpha = if (isDark) 0.055f else 0.08f),
+            AppColors.GlassGlowPink.copy(alpha = if (isDark) 0.045f else 0.045f)
         )
     )
     val border = Brush.linearGradient(
         listOf(
-            Color.White.copy(alpha = if (isDark) 0.18f else 0.78f),
-            Color.White.copy(alpha = if (isDark) 0.045f else 0.28f),
-            AppColors.Calorie.copy(alpha = if (isDark) 0.075f else 0.14f)
+            Color.White.copy(alpha = if (isDark) 0.25f else 0.78f),
+            Color.White.copy(alpha = if (isDark) 0.055f else 0.28f),
+            AppColors.GlassGlowPink.copy(alpha = if (isDark) 0.20f else 0.14f)
         )
     )
 
     Box(
         modifier = modifier
             .shadow(
-                elevation = if (isDark) 14.dp else 10.dp,
+                elevation = if (isDark) 18.dp else 10.dp,
                 shape = shape,
                 ambientColor = shadowColor,
                 spotColor = shadowColor
