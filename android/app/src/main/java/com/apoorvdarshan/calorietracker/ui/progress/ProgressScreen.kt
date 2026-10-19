@@ -199,7 +199,20 @@ enum class TimeRange(@StringRes val labelRes: Int, val days: Int) {
 fun ProgressScreen(container: AppContainer) {
     var destination by rememberSaveable { mutableStateOf(ProgressDestination.MY_PROGRESS) }
     val destinationState = rememberSaveableStateHolder()
-    Column(Modifier.fillMaxSize()) {
+    Column(
+        Modifier
+            .fillMaxSize()
+            .background(
+                Brush.linearGradient(
+                    listOf(
+                        AppColors.AppBackgroundDark,
+                        Color(0xFF100A18),
+                        Color(0xFF0B0B13),
+                        AppColors.AppBackgroundDark
+                    )
+                )
+            )
+    ) {
         ProgressDestinationSelector(
             selected = destination,
             onSelect = { destination = it },
