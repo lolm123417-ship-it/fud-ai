@@ -1,11 +1,11 @@
 <resources>
     <!-- Widgets -->
-    <string name="app_name">Fud AI</string>
-    <string name="widget_calorie_label">Fud AI Kalorie</string>
+    <string name="app_name">CT</string>
+    <string name="widget_calorie_label">CT Calories</string>
     <string name="widget_calorie_description">Přehled dnešních kalorií a maker na první pohled.</string>
-    <string name="widget_protein_label">Fud AI Bílkoviny</string>
+    <string name="widget_protein_label">CT Protein</string>
     <string name="widget_protein_description">Přehled dnešního příjmu bílkovin na první pohled.</string>
-    <string name="widget_water_label">Fud AI Voda</string>
+    <string name="widget_water_label">CT Water</string>
     <string name="widget_water_description">Přehled dnešního pitného režimu na první pohled.</string>
     <string name="widget_water_disabled">Zapni sledování vody ve Fud AI</string>
     <string name="widget_open_to_refresh">Otevři aplikaci pro obnovení</string>
